@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Colors
+RED='\033[0;31m'
+ORANGE='\033[0;33m'
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+CYAN='\033[0;36m'
+LIGHTCYAN='\033[1;36m'
