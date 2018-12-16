@@ -35,13 +35,13 @@ nginxInstallation () {
 	echo -e "  Alterting ${YELLOW}${ITALICS}/etc/nginx/sites-available/default${NOSTYLE} to point to new symlink created location. Original is backedup ${YELLOW}${ITALICS}(/etc/nginx/sites-available/default.bak)${NOSTYLE}"
 	echo ""
 	sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-	sudo cp ../../files/nginx/default /etc/nginx/sites-avaiable/
+	sudo cp files/nginx/default /etc/nginx/sites-avaiable/
 	echo ""
 	echo -e "  Altered ${YELLOW}${ITALICS}/etc/nginx/sites-available/default${NOSTYLE} Successfully"
 	echo ""
 	echo -e "  Copying Boilerplate Templates for Easy of Access. Find these files in ${YELLOW}${ITALICS}~/$LOCAL_WWW_DIR/default${NOSTYLE}"
 	echo ""
-	cp -a ../../files/nginx/www/. ~/$LOCAL_WWW_DIR/default/
+	cp -a files/nginx/www/. ~/$LOCAL_WWW_DIR/default/
 	echo ""
 	echo -e "  Copied All Boilerplates Successfully"
 	echo ""

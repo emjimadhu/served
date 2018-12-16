@@ -8,9 +8,9 @@
 . utilities/file-paths.bash
 
 # Importing Functions
-. functions/installation-steps.bash
 . functions/web-servers/nginx-installation.bash
 . functions/web-servers/index.bash
+. functions/installation-steps.bash
 
 # Clearing Screen
 clear
