@@ -17,3 +17,9 @@ changeNginxIcon
 # Determining MongoDB Installation
 #
 changeMongoDbIcon
+
+#
+# Creating Log File Location
+#
+mkdir logs
+touch $LOG_FILE_PATH/$LOG_FILE_NAME.log

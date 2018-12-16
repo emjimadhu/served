@@ -6,10 +6,10 @@ databasesInstallation () {
 		clear
 	fi
 
-	echo ""
-	echo -e "${LIGHTCYAN} ${BOLD}Databases Installation.${NOSTYLE}"
-	echo ""
-	echo ""
+	echolog ""
+	echolog "${LIGHTCYAN} ${BOLD}Databases Installation.${NOSTYLE}"
+	echolog ""
+	echolog ""
 
 	PS3='Select which Database to Install: '
 	installationOptions=("$MONGODB_ICON MongoDB" "Go to Main Steps" "Quit")
@@ -29,7 +29,7 @@ databasesInstallation () {
 					exit
 					break
 					;;
-			*) echo "invalid option $REPLY";;
+			*) echolog "invalid option $REPLY";;
     esac
 	done
 }

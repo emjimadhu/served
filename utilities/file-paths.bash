@@ -15,3 +15,9 @@ LOCAL_WWW_DIR="static-files"
 # Default www directory
 #
 DEFAULT_WWW_DIR="/var/www"
+
+#
+# Log File Location for this Project
+#
+LOG_FILE_NAME="installation"
+LOG_FILE_PATH="logs"

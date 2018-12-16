@@ -6,10 +6,10 @@ webServersInstallationSteps () {
 		clear
 	fi
 
-	echo ""
-	echo -e "${LIGHTCYAN} ${BOLD}Web Server Installation.${NOSTYLE}"
-	echo ""
-	echo ""
+	echolog ""
+	echolog "${LIGHTCYAN} ${BOLD}Web Server Installation.${NOSTYLE}"
+	echolog ""
+	echolog ""
 
 	PS3='Select which Web Server to Install: '
 	installationOptions=("$NGINX_ICON NGINX" "Go to Main Steps" "Quit")
@@ -29,7 +29,7 @@ webServersInstallationSteps () {
 					exit
 					break
 					;;
-			*) echo "invalid option $REPLY";;
+			*) echolog "invalid option $REPLY";;
     esac
 	done
 }

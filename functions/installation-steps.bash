@@ -4,10 +4,10 @@ installationSteps () {
 	# Clearing Screen
 	clear
 
-	echo ""
-	echo -e "${LIGHTCYAN} ${BOLD}You have agreed, So let's setup your server.${NOSTYLE}"
-	echo ""
-	echo ""
+	echolog ""
+	echolog "${LIGHTCYAN} ${BOLD}You have agreed, So let's setup your server.${NOSTYLE}"
+	echolog ""
+	echolog ""
 
 	PS3='Select Packages to install: '
 	installationOptions=("$WEBSERVER_ICON Web Servers" "$DATABASES_ICON Databases" "Quit")
@@ -24,7 +24,7 @@ installationSteps () {
 					exit
 					break
 					;;
-			*) echo "invalid option $REPLY";;
+			*) echolog "invalid option $REPLY";;
     esac
 	done	
 }

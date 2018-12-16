@@ -1,18 +1,18 @@
 #!/bin/bash
 
 mongoDbInstallation () {
-	echo ""
-	echo ""
-	echo -e "${YELLOW}┏ ---------------------"
-	echo ""
-	echo -e "  Installing ${BOLD}MongoDB${NOSTYLE}"
-	echo ""
-	echo -e "  Updating Repos"
-	echo ""
+	echolog ""
+	echolog ""
+	echolog "${YELLOW}┏ ---------------------"
+	echolog ""
+	echolog "  Installing ${BOLD}MongoDB${NOSTYLE}"
+	echolog ""
+	echolog "  Updating Repos"
+	echolog ""
 	# sudo apt-get update
-	echo ""
-	echo -e "  Installing MongoDB Package"
-	echo ""
+	echolog ""
+	echolog "  Installing MongoDB Package"
+	echolog ""
 	if [ "$UBUNTU_GREATER" = true ]; then
 		sudo apt-get install -y mongodb
 	else
@@ -22,18 +22,18 @@ mongoDbInstallation () {
 		sudo apt-get install -y mongodb-org
 		sudo systemctl start mongod
 	fi
-	echo ""
-	echo -e "  MongoDB Installed"
-	echo ""
-	echo -e "  Adding MongoDB to Auto Start"
-	echo ""
+	echolog ""
+	echolog "  MongoDB Installed"
+	echolog ""
+	echolog "  Adding MongoDB to Auto Start"
+	echolog ""
 	if [ "$UBUNTU_GREATER" = true ]; then
 		sudo systemctl enable mongodb.service
 	else
 		sudo systemctl enable mongod.service
 	fi
-	echo ""
-	echo -e "  MongoDB Added to Auto Start"
-	echo -e "${YELLOW}┗ ---------------------${NOSTYLE}"
+	echolog ""
+	echolog "  MongoDB Added to Auto Start"
+	echolog "${YELLOW}┗ ---------------------${NOSTYLE}"
 	changeMongoDbIcon
 }
