@@ -52,5 +52,5 @@ nginxInstallation () {
 	echo ""
 	echo -e "  Nginx Installed Successfully to ${YELLOW}${BOLD}http://$PUBLIC_IP${NOSTYLE} to see the changes."
 	echo -e "${YELLOW}┗ ---------------------${NOSTYLE}"
-	changeNGINX_ICON
+	changeNginxIcon
 }

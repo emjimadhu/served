@@ -8,8 +8,11 @@
 . utilities/file-paths.bash
 
 # Importing Functions
+. functions/initial-env-check.bash
 . functions/web-servers/nginx-installation.bash
 . functions/web-servers/index.bash
+. functions/databases/mongodb-installation.bash
+. functions/databases/index.bash
 . functions/installation-steps.bash
 
 # Clearing Screen

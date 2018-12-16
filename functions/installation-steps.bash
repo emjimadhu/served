@@ -10,18 +10,15 @@ installationSteps () {
 	echo ""
 
 	PS3='Select Packages to install: '
-	installationOptions=("$WEBSERVER_ICON Web Servers" "HTTP Servers" "Databases" "Quit")
+	installationOptions=("$WEBSERVER_ICON Web Servers" "$DATABASES_ICON Databases" "Quit")
 	select opt in "${installationOptions[@]}"
 	do
     case $opt in
 			"$WEBSERVER_ICON Web Servers")
 					webServersInstallationSteps
 					;;
-			"HTTP Servers")
-					echo "You selected HTTP Servers"
-					;;
-			"Databases")
-					echo "you chose choice $REPLY which is $opt"
+			"$DATABASES_ICON Databases")
+					databasesInstallation
 					;;
 			"Quit")
 					exit
