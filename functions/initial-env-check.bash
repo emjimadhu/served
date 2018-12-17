@@ -21,5 +21,13 @@ changeMongoDbIcon
 #
 # Creating Log File Location
 #
-mkdir logs
+mkdir $LOG_FILE_PATH
 touch $LOG_FILE_PATH/$LOG_FILE_NAME.log
+touch $LOG_FILE_PATH/$NGINX_INSTALLATION_LOG.log
+touch $LOG_FILE_PATH/$MONGODB_INSTALLATION_LOG.log
+touch $LOG_FILE_PATH/$LETSENCRYPT_INSTALLATION_LOG.log
+
+#
+# Creating Directories for Let's Encrypt SSLs
+#
+mkdir -p ~/.keys/ssl

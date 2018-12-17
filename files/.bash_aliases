@@ -46,6 +46,9 @@ create-nginx-logs () {
 create-ssl () {
   cd
   echo ""
+  echo "Stopping NGINX Server to Generate SSL"
+  sudo systemctl stop nginx
+  echo ""
   echo "Moved to Home Directory"
   ./certbot-auto certonly --standalone -d $1
   echo ""
@@ -64,5 +67,8 @@ create-ssl () {
   replacedString=`replaceCharacters $1 . -`
   create-nginx-logs $replacedString
   echo "Logs Created."
+  echo "Starting NGINX Server Again,"
+  sudo systemctl start nginx
+  echo ""
   echo ""
 }

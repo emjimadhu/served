@@ -1,26 +1,23 @@
 #!/bin/bash
 
-databasesInstallation () {
+miscInstallation () {
 	if [ "$1" != "skip" ]; then
 		# Clearing Screen
 		clear
 	fi
 
 	echolog ""
-	echolog "${LIGHTCYAN} ${BOLD}Databases Installation.${NOSTYLE}"
+	echolog "${LIGHTCYAN} ${BOLD}Misc Installation.${NOSTYLE}"
 	echolog ""
 	echolog ""
 
 	PS3='Select which Database to Install: '
-	installationOptions=("$MONGODB_ICON MongoDB" "Go to Main Steps" "Quit")
+	installationOptions=("Let's Encrypt SSL" "Go to Main Steps" "Quit")
 	select opt in "${installationOptions[@]}"
 	do
     case $opt in
-			"$MONGODB_ICON MongoDB")
-					mongoDbInstallation
-					sleep 5s
-					databasesInstallation
-					break
+			"Let's Encrypt SSL")
+					letsencryptInstallation
 					;;
 			"Go to Main Steps")
 					installationSteps

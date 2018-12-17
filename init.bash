@@ -14,6 +14,8 @@
 . functions/web-servers/index.bash
 . functions/databases/mongodb-installation.bash
 . functions/databases/index.bash
+. functions/misc/letsencrypt-installation.bash
+. functions/misc/index.bash
 . functions/installation-steps.bash
 
 # Clearing Screen

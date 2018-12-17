@@ -9,7 +9,7 @@ mongoDbInstallation () {
 	echolog ""
 	echolog "  Updating Repos"
 	echolog ""
-	# sudo apt-get update
+	sudo apt-get update
 	echolog ""
 	echolog "  Installing MongoDB Package"
 	echolog ""
