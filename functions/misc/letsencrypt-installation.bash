@@ -19,11 +19,11 @@ letsencryptInstallation () {
 	source ~/.bash_aliases
 	echolog " Everything is Done Successfully" $LETSENCRYPT_INSTALLATION_LOG
 	echolog "" $LETSENCRYPT_INSTALLATION_LOG
-	echolog "  Now From your terminal whenever you want to create a ssl type like this command ${ITALICS}create-ssl example.com${NOSTYLE}. The First Argument should be your Domain Name." $LETSENCRYPT_INSTALLATION_LOG
+	echolog "  Now From your terminal whenever you want to create a ssl type like this command ${ITALICS}${ORANGE}create-ssl example.com${NOSTYLE}. The First Argument should be your Domain Name." $LETSENCRYPT_INSTALLATION_LOG
 	echolog "" $LETSENCRYPT_INSTALLATION_LOG
 	echolog "  All the necessary files for you and put it in ${BOLD}~/.keys/ssl/<your-domain-name>${NOSTYLE}. Now all you have to do is, configures your NGINX server block to point to this ssl certificate created in ${BOLD}~/.keys/ssl/<your-domain-name>" $LETSENCRYPT_INSTALLATION_LOG
 	echolog "" $LETSENCRYPT_INSTALLATION_LOG
 	echolog "" $LETSENCRYPT_INSTALLATION_LOG
-	echolog "${YELLOW}┗ ---------------------${NOSTYLE}" 
-	changeMongoDbIcon
+	echolog "${YELLOW}┗ ---------------------${NOSTYLE}" $LETSENCRYPT_INSTALLATION_LOG
+	changeLetsEncryptIcon
 }

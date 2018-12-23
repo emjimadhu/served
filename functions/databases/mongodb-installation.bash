@@ -1,18 +1,18 @@
 #!/bin/bash
 
 mongoDbInstallation () {
-	echolog ""
-	echolog ""
-	echolog "${YELLOW}┏ ---------------------"
-	echolog ""
-	echolog "  Installing ${BOLD}MongoDB${NOSTYLE}"
-	echolog ""
-	echolog "  Updating Repos"
-	echolog ""
+	echolog "" $MONGODB_INSTALLATION_LOG
+	echolog "" $MONGODB_INSTALLATION_LOG
+	echolog "${YELLOW}┏ ---------------------" $MONGODB_INSTALLATION_LOG
+	echolog "" $MONGODB_INSTALLATION_LOG
+	echolog "  Installing ${BOLD}MongoDB${NOSTYLE}" $MONGODB_INSTALLATION_LOG
+	echolog "" $MONGODB_INSTALLATION_LOG
+	echolog "  Updating Repos" $MONGODB_INSTALLATION_LOG
+	echolog "" $MONGODB_INSTALLATION_LOG
 	sudo apt-get update
-	echolog ""
-	echolog "  Installing MongoDB Package"
-	echolog ""
+	echolog "" $MONGODB_INSTALLATION_LOG
+	echolog "  Installing MongoDB Package" $MONGODB_INSTALLATION_LOG
+	echolog "" $MONGODB_INSTALLATION_LOG
 	if [ "$UBUNTU_GREATER" = true ]; then
 		sudo apt-get install -y mongodb
 	else
@@ -22,18 +22,18 @@ mongoDbInstallation () {
 		sudo apt-get install -y mongodb-org
 		sudo systemctl start mongod
 	fi
-	echolog ""
-	echolog "  MongoDB Installed"
-	echolog ""
-	echolog "  Adding MongoDB to Auto Start"
-	echolog ""
+	echolog "" $MONGODB_INSTALLATION_LOG
+	echolog "  MongoDB Installed" $MONGODB_INSTALLATION_LOG
+	echolog "" $MONGODB_INSTALLATION_LOG
+	echolog "  Adding MongoDB to Auto Start" $MONGODB_INSTALLATION_LOG
+	echolog "" $MONGODB_INSTALLATION_LOG
 	if [ "$UBUNTU_GREATER" = true ]; then
 		sudo systemctl enable mongodb.service
 	else
 		sudo systemctl enable mongod.service
 	fi
-	echolog ""
-	echolog "  MongoDB Added to Auto Start"
-	echolog "${YELLOW}┗ ---------------------${NOSTYLE}"
+	echolog "" $MONGODB_INSTALLATION_LOG
+	echolog "  MongoDB Added to Auto Start" $MONGODB_INSTALLATION_LOG
+	echolog "${YELLOW}┗ ---------------------${NOSTYLE}" $MONGODB_INSTALLATION_LOG
 	changeMongoDbIcon
 }

@@ -6,10 +6,10 @@ databasesInstallation () {
 		clear
 	fi
 
-	echolog ""
-	echolog "${LIGHTCYAN} ${BOLD}Databases Installation.${NOSTYLE}"
-	echolog ""
-	echolog ""
+	echolog "" $DATABASE_INSTALLATION
+	echolog "${LIGHTCYAN} ${BOLD}Databases Installation.${NOSTYLE}" $DATABASE_INSTALLATION
+	echolog "" $DATABASE_INSTALLATION
+	echolog "" $DATABASE_INSTALLATION
 
 	PS3='Select which Database to Install: '
 	installationOptions=("$MONGODB_ICON MongoDB" "Go to Main Steps" "Quit")
@@ -17,6 +17,7 @@ databasesInstallation () {
 	do
     case $opt in
 			"$MONGODB_ICON MongoDB")
+					echolog "You chose MongoDB" $DATABASE_INSTALLATION
 					mongoDbInstallation
 					sleep 5s
 					databasesInstallation

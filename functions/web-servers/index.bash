@@ -6,10 +6,10 @@ webServersInstallationSteps () {
 		clear
 	fi
 
-	echolog ""
-	echolog "${LIGHTCYAN} ${BOLD}Web Server Installation.${NOSTYLE}"
-	echolog ""
-	echolog ""
+	echolog "" $WEBSERVER_INSTALLATION
+	echolog "${LIGHTCYAN} ${BOLD}Web Server Installation.${NOSTYLE}" $WEBSERVER_INSTALLATION
+	echolog "" $WEBSERVER_INSTALLATION
+	echolog "" $WEBSERVER_INSTALLATION
 
 	PS3='Select which Web Server to Install: '
 	installationOptions=("$NGINX_ICON NGINX" "Go to Main Steps" "Quit")
@@ -17,6 +17,7 @@ webServersInstallationSteps () {
 	do
     case $opt in
 			"$NGINX_ICON NGINX")
+					echolog "You chose NGINX Installation" $WEBSERVER_INSTALLATION
 					nginxInstallation
 					sleep 5s
 					webServersInstallationSteps

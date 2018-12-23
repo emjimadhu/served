@@ -21,28 +21,28 @@
 # Clearing Screen
 clear
 
-echolog ""
-echolog "${ORANGE}███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ ███████╗██████╗ "
-echolog "${ORANGE}██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗██╔════╝██╔══██╗"
-echolog "${ORANGE}███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝█████╗  ██║  ██║"
-echolog "${ORANGE}╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗██╔══╝  ██║  ██║"
-echolog "${ORANGE}███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║███████╗██████╔╝"
-echolog "${ORANGE}╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═════╝ "
-echolog "By ${CYAN} ${BOLD}Em Ji Madhu${NOSTYLE}"
+echolog "" $INITIAL_SCREEN
+echolog "${ORANGE}███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ ███████╗██████╗ " $INITIAL_SCREEN
+echolog "${ORANGE}██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗██╔════╝██╔══██╗" $INITIAL_SCREEN
+echolog "${ORANGE}███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝█████╗  ██║  ██║" $INITIAL_SCREEN
+echolog "${ORANGE}╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗██╔══╝  ██║  ██║" $INITIAL_SCREEN
+echolog "${ORANGE}███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║███████╗██████╔╝" $INITIAL_SCREEN
+echolog "${ORANGE}╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═════╝ " $INITIAL_SCREEN
+echolog "By ${CYAN} ${BOLD}Em Ji Madhu${NOSTYLE}" $INITIAL_SCREEN
 
-echolog ""
-echolog ""
-echolog "${LIGHTCYAN} ${BOLD}Read the following and Accept if you agree.${NOSTYLE}"
-echolog ""
-echolog "I created this script for my own preferences. It may or may not suitable for you. And i haven't added Error Checks. So it might go wrong at anytime. And it was created to facilitate the setup of Fresh Server! I am in no way responsible, if anything happens to your Server. ${ITALICS}You are responsible for any problems.${NOSTYLE}"
-echolog ""
+echolog "" $INITIAL_SCREEN
+echolog "" $INITIAL_SCREEN
+echolog "${LIGHTCYAN} ${BOLD}Read the following and Accept if you agree.${NOSTYLE}" $INITIAL_SCREEN
+echolog "" $INITIAL_SCREEN
+echolog "I created this script for my own preferences. It may or may not suitable for you. And i haven't added Error Checks. So it might go wrong at anytime. And it was created to facilitate the setup of Fresh Server! I am in no way responsible, if anything happens to your Server. ${ITALICS}You are responsible for any problems.${NOSTYLE}" $INITIAL_SCREEN
+echolog "" $INITIAL_SCREEN
 read -p "Do you agree? [Y/n] " yn
 
 if [ "$yn" = "y" -o "$yn" = "Y" -o "$yn" = "" ]; then
-	echolog "You Agreed"
+	echolog "You Agreed" $INITIAL_SCREEN
 	installationSteps
 else
-	echolog "You Disagreed."
+	echolog "You Disagreed." $INITIAL_SCREEN
 fi
 
 echolog "${NOSTYLE}"

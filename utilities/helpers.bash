@@ -6,6 +6,6 @@ echolog () (
 	else
 		LOG_FILE_NAME=$MAIN_INSTALLATION_NAME
 	fi
-	echolog $1
-	echolog $1 >> $LOG_FILE_PATH/$LOG_FILE_NAME.log
+	echo -e $1
+	echo -e $1 >> $LOG_FILE_PATH/$LOG_FILE_NAME.log
 )
