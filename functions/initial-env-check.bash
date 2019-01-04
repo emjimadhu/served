@@ -19,6 +19,11 @@ changeNginxIcon
 changeMongoDbIcon
 
 #
+# Determining NodeJS Installation
+#
+changeNodeIcon
+
+#
 # Creating Log File Location
 #
 if [ ! -d "$LOG_FILE_PATH" ]; then

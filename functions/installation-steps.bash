@@ -10,7 +10,7 @@ installationSteps () {
 	echolog "" $MAIN_INSTALLTION_NAME
 
 	PS3='Select Packages to install: '
-	installationOptions=("$WEBSERVER_ICON Web Servers" "$DATABASES_ICON Databases" "Misc" "Quit")
+	installationOptions=("$WEBSERVER_ICON Web Servers" "$DATABASES_ICON Databases" "$HTTPSERVER_ICON HTTP Servers" "Misc" "Quit")
 	select opt in "${installationOptions[@]}"
 	do
     case $opt in
@@ -21,6 +21,10 @@ installationSteps () {
 			"$DATABASES_ICON Databases")
 					echolog "You chose Databases" $MAIN_INSTALLTION_NAME
 					databasesInstallation
+					;;
+			"$HTTPSERVER_ICON HTTP Servers")
+					echolog "You chose HTTP Servers" $MAIN_INSTALLTION_NAME
+					httpServersInstallation
 					;;
 			"Misc")
 					miscInstallation

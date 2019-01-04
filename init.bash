@@ -14,6 +14,8 @@
 . functions/web-servers/index.bash
 . functions/databases/mongodb-installation.bash
 . functions/databases/index.bash
+. functions/http-servers/nodejs-installation.bash
+. functions/http-servers/index.bash
 . functions/misc/letsencrypt-installation.bash
 . functions/misc/index.bash
 . functions/installation-steps.bash
@@ -22,12 +24,12 @@
 clear
 
 echolog "" $INITIAL_SCREEN
-echolog "${ORANGE}███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ ███████╗██████╗ " $INITIAL_SCREEN
-echolog "${ORANGE}██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗██╔════╝██╔══██╗" $INITIAL_SCREEN
-echolog "${ORANGE}███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝█████╗  ██║  ██║" $INITIAL_SCREEN
-echolog "${ORANGE}╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗██╔══╝  ██║  ██║" $INITIAL_SCREEN
-echolog "${ORANGE}███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║███████╗██████╔╝" $INITIAL_SCREEN
-echolog "${ORANGE}╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═════╝ " $INITIAL_SCREEN
+echo -e "${ORANGE}███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ ███████╗██████╗ "
+echo -e "${ORANGE}██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗██╔════╝██╔══██╗"
+echo -e "${ORANGE}███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝█████╗  ██║  ██║"
+echo -e "${ORANGE}╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗██╔══╝  ██║  ██║"
+echo -e "${ORANGE}███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║███████╗██████╔╝"
+echo -e "${ORANGE}╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═════╝ "
 echolog "By ${CYAN} ${BOLD}Em Ji Madhu${NOSTYLE}" $INITIAL_SCREEN
 
 echolog "" $INITIAL_SCREEN
