@@ -8,6 +8,8 @@ This is bash script to Automate "Intital Server Setup" in Ubuntu 16.* and 18.*.
     * NGINX
 * Databases
     * MongoDB
+* HTTP Servers
+    * Nodejs
 * Misc
     * Let's Crypt SSL
 
