@@ -2,6 +2,8 @@
 
 This is bash script to Automate "Intital Server Setup" in Ubuntu 16.* and 18.*.
 
+![MAin](images/1.png?raw=true "Main")
+
 ## Features
 
 * Web Servers
@@ -58,6 +60,18 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Screenshots
+
+![MAin Installation](images/2.png?raw=true "Main Installation")
+
+![Web Server Installation](images/3.png?raw=true "Web Server Installation")
+
+![Database Installation](images/4.png?raw=true "Database Installation")
+
+![HTTP Server Installation](images/5.png?raw=true "HTTP Server Installation")
+
+![Misc Installation](images/6.png?raw=true "Misc Installation")
 
 ## Resources
 
