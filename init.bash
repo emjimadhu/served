@@ -17,6 +17,7 @@
 . functions/http-servers/nodejs-installation.bash
 . functions/http-servers/index.bash
 . functions/misc/letsencrypt-installation.bash
+. functions/misc/add-user.bash
 . functions/misc/index.bash
 . functions/installation-steps.bash
 
@@ -38,7 +39,8 @@ echolog "${LIGHTCYAN} ${BOLD}Read the following and Accept if you agree.${NOSTYL
 echolog "" $INITIAL_SCREEN
 echolog "I created this script for my own preferences. It may or may not suitable for you. And i haven't added Error Checks. So it might go wrong at anytime. And it was created to facilitate the setup of Fresh Server! I am in no way responsible, if anything happens to your Server. ${ITALICS}You are responsible for any problems.${NOSTYLE}" $INITIAL_SCREEN
 echolog "" $INITIAL_SCREEN
-read -p "Do you agree? [Y/n] " yn
+echolog "${LIGHTCYAN}Do you agree? [Y/n] ${NOSTYLE}"
+read yn
 
 if [ "$yn" = "y" -o "$yn" = "Y" -o "$yn" = "" ]; then
 	echolog "You Agreed" $INITIAL_SCREEN

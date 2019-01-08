@@ -14,6 +14,7 @@ This is bash script to Automate "Intital Server Setup" in Ubuntu 16.* and 18.*.
     * Nodejs
 * Misc
     * Let's Crypt SSL
+    * Create New User
 
 
 ## Prerequisites
