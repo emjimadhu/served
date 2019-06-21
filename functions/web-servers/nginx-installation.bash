@@ -27,15 +27,15 @@ nginxInstallation () {
 	echolog "" $NGINX_INSTALLATION_LOG
 	# Removing www directory so that symlink created properly
 	echolog "" $NGINX_INSTALLATION_LOG
-	sudo rm www
-	sudo ln -s ~/static-sites $DEFAULT_WWW_DIR
+	sudo rm -rf /var/www
+	sudo ln -s ~/$LOCAL_WWW_DIR $DEFAULT_WWW_DIR
 	echolog "" $NGINX_INSTALLATION_LOG
 	echolog "  Symlink created successfully." $NGINX_INSTALLATION_LOG
 	echolog "" $NGINX_INSTALLATION_LOG
 	echolog "  Alterting ${YELLOW}${ITALICS}/etc/nginx/sites-available/default${NOSTYLE} to point to new symlink created location. Original is backedup ${YELLOW}${ITALICS}(/etc/nginx/sites-available/default.bak)${NOSTYLE}" $NGINX_INSTALLATION_LOG
 	echolog "" $NGINX_INSTALLATION_LOG
 	sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-	sudo cp files/nginx/default /etc/nginx/sites-avaiable/
+	sudo cp files/nginx/default /etc/nginx/sites-available/
 	echolog "" $NGINX_INSTALLATION_LOG
 	echolog "  Altered ${YELLOW}${ITALICS}/etc/nginx/sites-available/default${NOSTYLE} Successfully" $NGINX_INSTALLATION_LOG
 	echolog "" $NGINX_INSTALLATION_LOG
